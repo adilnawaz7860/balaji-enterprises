@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;550;700;900&family=Outfit:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-brand-primary: #3b82f6; /* Shift toward modern power aesthetic */
+  --color-brand-secondary: #2563eb;
+}
+
+/* Custom styles for Bold Typography Theme */
+@layer utilities {
+  .bold-stroke {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2);
+    color: transparent;
+  }
+  
+  .dark .bold-stroke {
+    -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.25);
+    color: transparent;
+  }
+  
+  .light .bold-stroke {
+    -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.25);
+    color: transparent;
+  }
+
+  .card-glass {
+    background: rgba(11, 17, 33, 0.85); /* Deep powerful midnight obsidian */
+    border: 1px solid rgba(245, 158, 11, 0.12); /* Subtle warm amber touch border */
+    backdrop-filter: blur(16px);
+  }
+
+  .light .card-glass {
+    background: rgba(255, 255, 255, 0.95); /* Refined safe bright white */
+    border: 1px solid rgba(245, 158, 11, 0.2); /* Warm premium border */
+    backdrop-filter: blur(16px);
+  }
+}
+
+/* Custom scrollbar for beautiful dashboard */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
+
+/* Page transitions / fading utility classes */
+.page-fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+.page-fade-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}

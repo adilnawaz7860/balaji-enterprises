@@ -1,0 +1,6 @@
+{
+  "name": "Pre-Owned Vehicles Market",
+  "description": "Bilingual pre-owned vehicle dealership catalog and loan calculator featuring cars, auto rickshaws, and mini trucks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
