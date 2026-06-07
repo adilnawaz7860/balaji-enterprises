@@ -28,7 +28,7 @@ export default function Footer({ currentLanguage, currentTheme, activeTab, setAc
 
   // Helper to trigger direct general WhatsApp
   const generalWhatsAppLink = () => {
-    const rawNumber = "919999999999";
+    const rawNumber = "919565329999";
     const text = currentLanguage === 'en'
       ? "Hello Bharat Motors, I want to inquire about your verified pre-owned cars and auto rickshaws."
       : "नमस्ते भारत मोटर्स, मुझे आपकी पुरानी गाड़ियों और ऑटो रिक्शा के बारे में जानकारी चाहिए।";
@@ -189,7 +189,7 @@ export default function Footer({ currentLanguage, currentTheme, activeTab, setAc
                     {t.contactPhoneLabel}
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-3">
-                    <span className="font-extrabold text-slate-600 dark:text-slate-350">+91 99999 99999</span>
+                    <span className="font-extrabold text-slate-600 dark:text-slate-350">+919565329999</span>
                     <a
                       href={generalWhatsAppLink()}
                       target="_blank"

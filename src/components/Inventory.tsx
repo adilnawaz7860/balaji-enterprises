@@ -146,7 +146,7 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
 
   // Helper to trigger WhatsApp chat directly with full prefilled context
   const getWhatsAppLink = (vehicle: Vehicle) => {
-    const defaultNumber = "919999999999"; // Example prefilled Indian WhatsApp number
+    const defaultNumber = "919565329999"; // Example prefilled Indian WhatsApp number
     const baseText = translations[currentLanguage].whatsappInterest;
     const priceText = translations[currentLanguage].whatsappPriceMsg;
     const formattedPr = formatPrice(vehicle.price, currentLanguage);
