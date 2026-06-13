@@ -60,8 +60,8 @@ export default function About({ currentLanguage, currentTheme }: AboutProps) {
               id="about-owner-image-container"
             >
               <img
-                src="https://picsum.photos/seed/rajeshkumar/500/600"
-                alt="Rajesh Kumar Verma - Owner"
+                src="https://picsum.photos/seed/balajimotor/500/600"
+                alt="Balaji Motors - Owner"
                 className="w-full aspect-[4/5] object-cover rounded-2xl opacity-90 grayscale hover:grayscale-0 transition-all duration-500"
                 referrerPolicy="no-referrer"
               />

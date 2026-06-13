@@ -80,11 +80,11 @@ export const translations = {
     // About Page
     aboutTitle: "Meet the Founder & Dealer Principal",
     aboutSubtitle: "Building lifelong relations through trust and auto mechanics excellence since 2012.",
-    aboutOwnerName: "Mr. Rajesh Kumar Verma",
+    aboutOwnerName: "Balaji Motors",
     aboutOwnerRole: "Founder & Proprietor",
     aboutStoryParagraph1: "After working for 14 years as a lead diesel mechanic in Indian transport corporations, I started Balaji Enterprises in 2012. Our goal was simple: to provide honest, mechanically-certified vehicles that hardworking families, auto driver brothers, and small logistic business owners can rely on without fear of hidden breakdowns.",
     aboutStoryParagraph2: "Every single auto-rickshaw, Maruti car, or Mahindra mini-truck listed here undergoes a personal engine test and sound-check by me before we list it for sale. We don't sell junk; we sell livelihood.",
-    aboutTrust1Title: "Rajesh's personal Seal of Quality",
+    aboutTrust1Title: "Balaji Motors Seal of Quality",
     aboutTrust1Desc: "Each carburetor, clutch, suspension, and gearbox is fully inspected.",
     aboutTrust2Title: "Clean Documentation Promise",
     aboutTrust2Desc: "We handle the complete RC transfer and commercial permits with no extra broker fees.",

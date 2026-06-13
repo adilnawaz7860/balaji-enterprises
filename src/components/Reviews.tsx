@@ -33,7 +33,7 @@ const reviewsData: Review[] = [
     date: "May 2026",
     vehicleBought: { en: "Bajaj RE CNG Auto Rickshaw", hi: "बजाज RE सीएनजी ऑटो" },
     text: {
-      en: "Rajesh ji personally sound-tested the CNG carburetor and gave me a 6-month engine guarantee. Now my auto runs daily, saving fuel and making solid daily earnings for my family.",
+      en: "Balaji Motors personally sound-tested the CNG carburetor and gave me a 6-month engine guarantee. Now my auto runs daily, saving fuel and making solid daily earnings for my family.",
       hi: "राजेश जी ने खुद इंजन की ट्यूनिंग और सीएनजी कार्बोरेटर की जांच करके दी थी। गाड़ी रोज बिना किसी रुकावट के करीब 110 किमी चलती है। एकदम पक्का और सच्चा काम है यहाँ।"
     },
     theme: "auto",
@@ -49,8 +49,8 @@ const reviewsData: Review[] = [
     date: "April 2026",
     vehicleBought: { en: "Maruti Swift VXI (2018)", hi: "मारुति स्विफ्ट VXI (2018)" },
     text: {
-      en: "For a middle-class family, buying a car involves life savings. Rajesh Motors ensured complete transparency, arranged immediate bank EMI in 2 hours, and did the RC transfer without any dealer bribes.",
-      hi: "हम जैसे नौकरीपेशा लोगों के लिए कार खरीदना सपने जैसा होता है। राजेश मोटर्स में कोई झूठ नहीं बोला जाता। कार बिल्कुल शोरूम कंडीशन में मिली और 3 दिन में आरसी भी नाम हो गई।"
+      en: "For a middle-class family, buying a car involves life savings. Balaji Motors ensured complete transparency, arranged immediate bank EMI in 2 hours, and did the RC transfer without any dealer bribes.",
+      hi: "हम जैसे नौकरीपेशा लोगों के लिए कार खरीदना सपने जैसा होता है। बालाजी मोटर्स में कोई झूठ नहीं बोला जाता। कार बिल्कुल शोरूम कंडीशन में मिली और 3 दिन में आरसी भी नाम हो गई।"
     },
     theme: "car",
     avatarSeed: "anil"
@@ -65,7 +65,7 @@ const reviewsData: Review[] = [
     date: "March 2026",
     vehicleBought: { en: "Tata Ace Gold (Chota Hathi)", hi: "टाटा एस गोल्ड (छोटा हाथी)" },
     text: {
-      en: "Purchased a pre-owned Tata Ace for factory deliveries. The leaf-spring suspension and chassis were rebuilt. Rajesh ji behaves like an elder brother, explaining details honestly. Complete business satisfaction.",
+      en: "Purchased a pre-owned Tata Ace for factory deliveries. The leaf-spring suspension and chassis were rebuilt. Balaji Motors behaves like an elder brother, explaining details honestly. Complete business satisfaction.",
       hi: "फैक्ट्री का माल ढोने के लिए टाटा एस खरीदा था। गाड़ी का लोड टेस्ट करके दिया गया था। यहाँ मैकेनिक स्तर से काम होता है, इसलिए इंजन बहुत सॉलिड चलता है। पूरा पैसा वसूल।"
     },
     theme: "mini-truck",

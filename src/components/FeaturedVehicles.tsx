@@ -152,7 +152,7 @@ export default function FeaturedVehicles({ currentLanguage, currentTheme, setAct
           <div className="text-center max-w-3xl mx-auto mb-10 md:mb-12 space-y-4">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-500 text-xs font-bold uppercase tracking-widest">
               <Star className="h-3.5 w-3.5 fill-amber-500" />
-              <span>{currentLanguage === 'en' ? "Rajesh Verified Inventory" : "श्रेणी अनुसार जांची गई गाड़ियाँ"}</span>
+              <span>{currentLanguage === 'en' ? "Balaji Motors Verified Inventory" : "श्रेणी अनुसार जांची गई गाड़ियाँ"}</span>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-display font-black tracking-tight uppercase leading-none">
@@ -215,7 +215,7 @@ export default function FeaturedVehicles({ currentLanguage, currentTheme, setAct
                   <div className="absolute top-3 left-3 z-20">
                     <span className="text-[10px] font-extrabold uppercase tracking-wider bg-amber-500 text-slate-950 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-md">
                       <CheckCircle className="h-3.5 w-3.5" />
-                      <span>{currentLanguage === 'en' ? "Rajesh Verified" : "राजेश प्रमाणित"}</span>
+                      <span>{currentLanguage === 'en' ? "Balaji Verified" : "बालाजी प्रमाणित"}</span>
                     </span>
                   </div>
 

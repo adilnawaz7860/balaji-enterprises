@@ -1,4 +1,4 @@
-export type VehicleCategory = 'car' | 'auto' | 'mini-truck';
+export type VehicleCategory = 'car' | 'auto' | 'mini-truck' | 'bike';
 
 export interface Vehicle {
   id: string;

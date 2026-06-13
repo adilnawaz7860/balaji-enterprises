@@ -60,8 +60,8 @@ export default function Footer({ currentLanguage, currentTheme, activeTab, setAc
             
             <p className="text-xs leading-relaxed max-w-sm font-medium">
               {currentLanguage === 'en'
-                ? "Established in 2012 by Lead Mechanic Mr. Rajesh Kumar Verma. Hand-checked, sound-audited pre-owned Maruti cars, Bajaj auto rickshaws, and mini trucks for dependable livelihood."
-                : "मुख्य मैकेनिक श्री राजेश कुमार वर्मा द्वारा 2012 में स्थापित। आपकी दमदार कमाई और परिवार के सुरक्षित सफर के लिए जांची और परखी गई विश्वसनीय गाड़ियाँ।"}
+                ? "Established in 2012 by Balaji Motors. Hand-checked, sound-audited pre-owned Maruti cars, Bajaj auto rickshaws, and mini trucks for dependable livelihood."
+                : "बालाजी मोटर्स द्वारा 2012 में स्थापित। आपकी दमदार कमाई और परिवार के सुरक्षित सफर के लिए जांची और परखी गई विश्वसनीय गाड़ियाँ।"}
             </p>
             
             {/* Social Media Links Block */}
@@ -89,7 +89,7 @@ export default function Footer({ currentLanguage, currentTheme, activeTab, setAc
                   <Facebook className="h-4.5 w-4.5" />
                 </a>
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/_bala_ji_enterprises_?igsh=MXRjNXZ6YmQyZTBsdA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-xl bg-pink-650/10 text-pink-500 hover:bg-pink-600 hover:text-white transition-all cursor-pointer shadow-sm"
@@ -197,7 +197,7 @@ export default function Footer({ currentLanguage, currentTheme, activeTab, setAc
                       className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500 text-slate-950 text-[10px] font-extrabold uppercase tracking-widest rounded-md hover:bg-amber-600 transition-all cursor-pointer shadow"
                     >
                       <MessageCircle className="h-3.5 w-3.5" />
-                      <span>{currentLanguage === 'en' ? "WhatsApp Rajesh" : "व्हाट्सएप करें"}</span>
+                      <span>{currentLanguage === 'en' ? "WhatsApp Us" : "व्हाट्सएप करें"}</span>
                     </a>
                   </div>
                 </div>

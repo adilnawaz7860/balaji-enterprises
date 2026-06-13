@@ -1,219 +1,463 @@
 import { Vehicle } from './types';
 
 export const sampleVehicles: Vehicle[] = [
+  
   {
-    id: "v1",
-    category: "car",
-    make: "Maruti Suzuki",
-    model: "Swift VXI",
-    year: 2018,
-    price: 495000, // ₹ 4.95 Lakhs
-    mileage: 52000,
-    fuelType: "Petrol (पेट्रोल)",
+    id: "v12",
+    category: "mini-truck",
+    make: "Ashok Leyland",
+    model: "Bada Dost i2",
+    year: 2023,
+    price: 590000,
+    mileage: 62000,
+    fuelType: "Diesel (डीजल)",
     transmission: "Manual (मैनुअल)",
-    engine: "1.2L K-Series",
+    engine: "1.5L iGen4 Diesel",
     description: {
-      en: "Single owner Maruti Swift in pristine condition. Excellent mileage, very cold air conditioning, and complete dealership service record. Perfect family car.",
-      hi: "सिंगल ओनर मारुति स्विफ्ट, बिल्कुल बेहतरीन स्थिति में। शानदार माइलेज, बहुत ठंडा एसी, और पूरी डीलरशिप सर्विस रिकॉर्ड। परिवार के लिए बेहतरीन कार।"
+      en: "Ashok Leyland Bada Dost i2, trusted workhorse for heavy commercial loads. 2023 model, first owner, diesel powered. 62,000 km driven with robust build quality and strong chassis.",
+      hi: "अशोक लेलैंड बड़ा दोस्त i2, भारी व्यावसायिक माल के लिए विश्वसनीय वाहन। 2023 मॉडल, पहला मालिक, डीजल चालित। 62,000 किमी चला, मजबूत बिल्ड और चेसिस।"
     },
     features: {
-      en: ["Power Windows", "Double-din Music System", "Dual Airbags", "ABS with EBD", "Alloy Wheels"],
-      hi: ["पावर विंडो", "डबल-डिन म्यूजिक सिस्टम", "दो एयरबैग", "ABS और EBD", "अलॉय व्हील्स"]
+      en: ["Heavy Load Capacity", "First Owner 2023", "Diesel iGen4 Engine", "Commercial Grade Chassis"],
+      hi: ["भारी माल क्षमता", "2023 का पहला मालिक", "डीजल iGen4 इंजन", "कमर्शियल ग्रेड चेसिस"]
     },
-    image: "https://picsum.photos/seed/swiftv/600/400",
+    image: "ashokA1.jpeg",
     images: [
-      "https://picsum.photos/seed/swiftv/600/400",
-      "https://picsum.photos/seed/swiftv2/600/400",
-      "https://picsum.photos/seed/swiftv3/600/400"
+    "ashokA1.jpeg",
+    "ashokA2.jpeg",
+    "ashokA3.jpeg",
+    "ashokA4.jpeg",
+    "ashokA5.jpeg",
+    "ashokA6.jpeg",
+    "ashokA7.jpeg",
+    "ashokA8.jpeg",
+    "ashokA9.jpeg",
+    "ashokA10.jpegg",
     ],
     status: "available"
   },
   {
-    id: "v2",
-    category: "auto",
-    make: "Bajaj",
-    model: "RE Compact 4S",
-    year: 2020,
-    price: 185000, // ₹ 1.85 Lakhs
-    mileage: 28000,
-    fuelType: "CNG + Petrol (सीएनजी + पेट्रोल)",
-    transmission: "4-Speed Manual (4-स्पीड मैनुअल)",
-    engine: "198cc DTS-i",
-    description: {
-      en: "Highly fuel efficient commercial auto rickshaw. Direct raw power, perfect fitness certificate valid till 2028, and clean state permit clearance. Ready to run and earn.",
-      hi: "बेहद किफायती और दमदार व्यावसायिक ऑटो रिक्शा। बेहतरीन पिकअप, फिटनेस सर्टिफिकेट 2028 तक वैध है, और साफ-सुथरा राज्य परमिट। आज ही चलाएं और कमाएं।"
-    },
-    features: {
-      en: ["Dual CNG Tanks", "Spare Wheel & Tool Kit", "Waterproof Canopy", "Extra Cushioned Seats"],
-      hi: ["डबल सीएनजी टैंक", "अतिरिक्त पहिया और टूल किट", "वॉटरप्रूफ कैनोपी", "अतिरिक्त आरामदायक सीटें"]
-    },
-    image: "https://picsum.photos/seed/bajajre/600/400",
-    images: [
-      "https://picsum.photos/seed/bajajre/600/400",
-      "https://picsum.photos/seed/bajajre2/600/400",
-      "https://picsum.photos/seed/bajajre3/600/400"
-    ],
-    status: "available"
-  },
-  {
-    id: "v3",
+    id: "v13",
     category: "mini-truck",
     make: "Tata",
-    model: "Ace Gold (Chota Hathi)",
-    year: 2019,
-    price: 360000, // ₹ 3.6 Lakhs
-    mileage: 65000,
+    model: "Ace CNG",
+    year: 2024,
+    price: 420000,
+    mileage: 52000,
+    fuelType: "CNG (सीएनजी)",
+    transmission: "Manual (मैनुअल)",
+    engine: "702cc DI Engine (CNG)",
+    description: {
+      en: "Tata Ace CNG variant, 2024 model last batch, first owner. CNG fuel gives lower running cost for city delivery work. 52,000 km driven, clean and ready to earn.",
+      hi: "टाटा एस CNG वेरिएंट, 2024 मॉडल लास्ट बैच, पहला मालिक। सीएनजी ईंधन शहरी डिलीवरी के लिए किफायती। 52,000 किमी चला, साफ-सुथरा और कमाई के लिए तैयार।"
+    },
+    features: {
+      en: ["CNG Fuel Economy", "2024 Last Batch Model", "First Owner", "City Delivery Ready"],
+      hi: ["सीएनजी ईंधन किफायती", "2024 लास्ट बैच मॉडल", "पहला मालिक", "शहरी डिलीवरी के लिए तैयार"]
+    },
+    image: "tataACE20241.jpeg",
+    images: [
+      "tataACE20241.jpeg",
+  "tataACE20242.jpeg",
+  "tataACE20243.jpeg",
+  "tataACE20244.jpeg",
+  "tataACE20245.jpeg",
+  "tataACE20246.jpeg",
+    ],
+    status: "available"
+  },
+  {
+    id: "v14",
+    category: "mini-truck",
+    make: "Mahindra",
+    model: "Supro Maxi",
+    year: 2022,
+    price: 350000,
+    mileage: 48000,
     fuelType: "Diesel (डीजल)",
-    transmission: "5-Speed Manual (5-स्पीड मैनुअल)",
+    transmission: "Manual (मैनुअल)",
+    engine: "909cc mFalcon G80 Diesel",
+    description: {
+      en: "Mahindra Supro Maxi with widest cargo deck in class. 2022 model, first owner, diesel variant. 50,000 km driven with excellent payload capacity for local logistics.",
+      hi: "महिंद्रा सुप्रो मैक्सी, अपनी श्रेणी में सबसे चौड़ी कार्गो डेक। 2022 मॉडल, पहला मालिक, डीजल वेरिएंट। 50,000 किमी चला, स्थानीय लॉजिस्टिक्स के लिए शानदार।"
+    },
+    features: {
+      en: ["Wide Maxi Cargo Deck", "First Owner 2022", "Diesel Variant", "High Payload Capacity"],
+      hi: ["चौड़ी मैक्सी कार्गो डेक", "2022 का पहला मालिक", "डीजल वेरिएंट", "उच्च पेलोड क्षमता"]
+    },
+    image: "supromaxi1.jpeg",
+    images: [
+      "supromaxi2.jpeg",
+      "supromaxi2.jpeg",
+      "supromaxi3.jpeg",
+      "supromaxi4.jpeg",
+      "supromaxi5.jpeg",
+      "supromaxi6.jpeg",
+      "supromaxi7.jpeg",
+      "supromaxi8.jpeg",
+      "supromaxi9.jpeg",
+    ],
+    status: "available"
+  },
+  {
+    id: "v15",
+    category: "auto",
+    make: "Atul",
+    model: "Three Wheeler",
+    year: 2024,
+    price: 195000,
+    mileage: 31000,
+    fuelType: "CNG (सीएनजी)",
+    transmission: "4-Speed Manual (4-स्पीड मैनुअल)",
+    engine: "Single Cylinder CNG",
+    description: {
+      en: "Atul Three Wheeler cargo auto, 2024 last batch model. CNG powered with sturdy body and large enclosed cargo carrier. Only 31,000 km driven — excellent condition.",
+      hi: "आतुल थ्री व्हीलर कार्गो ऑटो, 2024 लास्ट बैच मॉडल। सीएनजी चालित, मजबूत बॉडी और बड़ा बंद कार्गो कैरियर। सिर्फ 31,000 किमी — बेहतरीन स्थिति।"
+    },
+    features: {
+      en: ["CNG Powered Cargo Auto", "2024 Last Batch Model", "Large Enclosed Cargo Body", "31,000 km Only"],
+      hi: ["सीएनजी चालित कार्गो ऑटो", "2024 लास्ट बैच मॉडल", "बड़ी बंद कार्गो बॉडी", "सिर्फ 31,000 किमी"]
+    },
+     image: "atul1.jpeg",
+    images: [
+      "atul2.jpeg",
+      "atul3.jpeg",
+      "atul4.jpeg",
+      "atul5.jpeg",
+      "atul6.jpeg",
+      "atul7.jpeg",
+      "atul8.jpeg",
+      "atul9.jpeg",
+    
+    ],
+    status: "available"
+  },
+ 
+  {
+    id: "v17",
+    category: "bike",
+    make: "Yamaha",
+    model: "R15M Version 4",
+    year: 2023,
+    price: 135000,
+    mileage: 15000,
+    fuelType: "Petrol (पेट्रोल)",
+    transmission: "6-Speed Manual (6-स्पीड मैनुअल)",
+    engine: "155cc VVA Liquid Cooled",
+    description: {
+      en: "Yamaha R15M Version 4, the ultimate sports bike in excellent condition. 2023 model with only 15,000 km run. Fully adjustable USD forks, quick-shifter and aggressive racing design.",
+      hi: "यामाहा R15M वर्जन 4, बेहतरीन स्थिति में अल्टीमेट स्पोर्ट्स बाइक। 2023 मॉडल, सिर्फ 15,000 किमी चली। फुली एडजस्टेबल USD फोर्क्स, क्विक-शिफ्टर और आक्रामक रेसिंग डिज़ाइन।"
+    },
+    features: {
+      en: ["Fully Adjustable USD Forks", "Quick Shifter", "Traction Control", "Dual Channel ABS"],
+      hi: ["फुली एडजस्टेबल USD फोर्क्स", "क्विक शिफ्टर", "ट्रैक्शन कंट्रोल", "डुअल चैनल ABS"]
+    },
+    image: "yamaharc1.jpeg",
+    images: [
+       "yamaharc1.jpeg",
+        "yamaharc2.jpeg",
+         "yamaharc4.jpeg",
+        "yamaharc5jpeg", 
+       
+        "yamaharc6.jpeg", 
+        "yamaharc7.jpeg",
+    ],
+    status: "available"
+  },
+  {
+    id: "v18",
+    category: "mini-truck",
+    make: "Ashok Leyland",
+    model: "Dost CNG",
+    year: 2022,
+    price: 420000,
+    mileage: 50000,
+    fuelType: "CNG Only (सीएनजी)",
+    transmission: "Manual (मैनुअल)",
+    engine: "1.5L iGen4 CNG",
+    description: {
+      en: "Ashok Leyland Dost CNG-only variant. 2022 model, 50,000 km driven. Fuel-efficient commercial mini truck ideal for regular city logistics and goods delivery at low running cost.",
+      hi: "अशोक लेलैंड दोस्त CNG-ओनली वेरिएंट। 2022 मॉडल, 50,000 किमी चला। ईंधन किफायती कमर्शियल मिनी ट्रक, शहरी लॉजिस्टिक्स और माल डिलीवरी के लिए बेहतरीन।"
+    },
+    features: {
+      en: ["CNG Only Variant", "2022 Model", "Commercial Grade Chassis", "Low Running Cost"],
+      hi: ["CNG ओनली वेरिएंट", "2022 मॉडल", "कमर्शियल ग्रेड चेसिस", "कम चलाने का खर्च"]
+    },
+    image: "ashokcng1.jpeg",
+    images: [
+      "ashokcng1.jpeg",
+      "ashokcng2.jpeg",
+      "ashokcng3.jpeg",
+      "ashokcng4.jpeg",
+      "ashokcng5.jpeg",
+      "ashokcng6.jpeg",
+      "ashokcng7.jpeg",
+      "ashokcng8.jpeg",
+      "ashokcng9.jpeg",
+    
+    ],
+    status: "available"
+  },
+  {
+    id: "v19",
+    category: "mini-truck",
+    make: "Maruti Suzuki",
+    model: "Super Carry",
+    year: 2022,
+    price: 400000,
+    mileage: 38000,
+    fuelType: "Petrol + CNG (पेट्रोल + सीएनजी)",
+    transmission: "Manual (मैनुअल)",
+    engine: "796cc BS6 CNG Engine",
+    description: {
+      en: "Maruti Suzuki Super Carry in next-to-new condition. Petrol+CNG dual fuel with only 32,000 km run. Lightweight, economical, and best city mileage for daily delivery work.",
+      hi: "मारुति सुज़ुकी सुपर कैरी, लगभग नई जैसी हालत में। पेट्रोल+CNG दोहरा ईंधन, सिर्फ 32,000 किमी चली। हल्का, किफायती और रोज़ाना डिलीवरी के लिए बेहतरीन माइलेज।"
+    },
+    features: {
+      en: ["Next to New Condition", "Petrol + CNG Dual Fuel", "32,000 km Only", "Best City Mileage"],
+      hi: ["लगभग नई जैसी हालत", "पेट्रोल + CNG दोहरा ईंधन", "सिर्फ 32,000 किमी", "बेहतरीन शहरी माइलेज"]
+    },
+    image: "supercarry1.jpeg",
+    images: [
+      "supercarry2.jpeg",
+      "supercarry3.jpeg",
+      "supercarry4.jpeg",
+       "supercarry5.jpeg",
+      "supercarry6.jpeg",
+      "supercarry7.jpeg",
+       "supercarry8.jpeg",
+      "supercarry9.jpeg",
+      "supercarry10.jpeg",
+    ],
+    status: "available"
+  },
+  
+  {
+    id: "v21",
+    category: "mini-truck",
+    make: "Tata",
+    model: "Ace Gold",
+    year: 2023,
+    price: 385000,
+    mileage: 49000,
+    fuelType: "Diesel (डीजल)",
+    transmission: "Manual (मैनुअल)",
     engine: "702cc DI Engine",
     description: {
-      en: "The undisputed king of mini trucks. Tata Ace Gold with high payload container capacity, reinforced rear suspension, and brand new tyres. Best helper for logistics businesses.",
-      hi: "मिनी ट्रकों का निर्विवाद राजा। टाटा एस गोल्ड, उच्च पेलोड क्षमता, मजबूत रियर सस्पेंशन और बिल्कुल नए टायर के साथ। माल ढुलाई व्यवसाय के लिए सबसे अच्छा सहायक।"
+      en: "Tata Ace Gold 2023 diesel, first owner in excellent condition. Only 49,000 km run. India's most trusted small commercial vehicle for last-mile delivery and city logistics.",
+      hi: "टाटा एस गोल्ड 2023 डीजल, पहला मालिक, बेहतरीन स्थिति। सिर्फ 49,000 किमी चला। लास्ट-माइल डिलीवरी और शहरी लॉजिस्टिक्स के लिए भारत का सबसे भरोसेमंद छोटा ट्रक।"
     },
     features: {
-      en: ["Reinforced Cargo Load Body", "Heavy Duty Springs", "Digital Instrument Cluster", "USB Mobile Charger"],
-      hi: ["मजबूत कार्गो लोड बॉडी", "हैवी ड्यूटी सस्पेंशन स्प्रिंग्स", "डिजिटल इंस्ट्रूमेंट क्लस्टर", "यूएसबी मोबाइल चार्जर"]
+      en: ["Excellent Condition", "First Owner 2023", "49,000 km Only", "Proven Commercial Workhorse"],
+      hi: ["बेहतरीन स्थिति", "2023 का पहला मालिक", "सिर्फ 49,000 किमी", "विश्वसनीय कमर्शियल वाहन"]
     },
-    image: "https://picsum.photos/seed/tataace/600/400",
+    image: "tataA1.jpeg",
     images: [
-      "https://picsum.photos/seed/tataace/600/400",
-      "https://picsum.photos/seed/tataace2/600/400",
-      "https://picsum.photos/seed/tataace3/600/400"
+      "tataA2.jpeg",
+      "tataA3.jpeg",
+      "tataA4.jpeg",
+     
+      "tataA5.jpeg",
+      "tataA6.jpeg",
+      "tataA7.jpeg",
+      "tataA8.jpeg",
+      "tataA9.jpeg",
+      "tataA10.jpeg",
+      "tataA11.jpeg",
     ],
     status: "available"
   },
   {
-    id: "v4",
-    category: "car",
-    make: "Hyundai",
-    model: "i10 Magna",
-    year: 2016,
-    price: 285000, // ₹ 2.85 Lakhs
-    mileage: 44000,
-    fuelType: "CNG Verified (पेट्रोल + सीएनजी)",
-    transmission: "Manual (मैनुअल)",
-    engine: "1.1L i-IRDE",
-    description: {
-      en: "Extremely clean interior and exterior. Fitted with certified seqential CNG kit for unparalleled city mileage of 26 km/kg. Serviced last month with suspension overhaul.",
-      hi: "अंदर और बाहर से बेहद साफ-सुथरी। बेजोड़ शहरी माइलेज (26 किमी/किग्रा) के लिए प्रमाणित सीएनजी किट फिटेड। पिछले महीने नई सर्विस और सस्पेंशन ओवरहाल के साथ उपलब्ध।"
-    },
-    features: {
-      en: ["Power Steering", "Kenwood Audio System", "Plush Seat Covers", "Central Locking"],
-      hi: ["पावर स्टीयरिंग", "केनवुड ऑडियो सिस्टम", "शानदार सीट कवर", "सेंट्रल लॉकिंग"]
-    },
-    image: "https://picsum.photos/seed/hyundaii/600/400",
-    images: [
-      "https://picsum.photos/seed/hyundaii/600/400",
-      "https://picsum.photos/seed/hyundaii2/600/400",
-      "https://picsum.photos/seed/hyundaii3/600/400"
-    ],
-    status: "available"
-  },
-  {
-    id: "v5",
-    category: "mini-truck",
-    make: "Mahindra",
-    model: "Supro Profit Truck",
-    year: 2021,
-    price: 480000, // ₹ 4.80 Lakhs
-    mileage: 38000,
-    fuelType: "Diesel (डीजल)",
-    transmission: "Manual (मैनुअल)",
-    engine: "909cc Direct Injection",
-    description: {
-      en: "Mahindra Supro mini truck with superb mileage and large 8.2 ft deck size. Extremely minor usage, original paints, and active engine warranty features. Drives like new.",
-      hi: "शानदार माइलेज और बड़ी 8.2 फीट डेक साइज वाला महिंद्रा सुप्रो मिनी ट्रक। बिल्कुल कम इस्तेमाल किया हुआ, ओरिजिनल पेंट, और इंजन वारंटी के साथ। नए जैसा अनुभव।"
-    },
-    features: {
-      en: ["Long 8.2 ft Cargo Deck", "Air Conditioned Cabin", "Eco/Power Drive Modes", "Tubeless Tyres"],
-      hi: ["लंबा 8.2 फीट कार्गो डेक", "एयर कंडीशनर केबिन", "इको/पावर ड्राइव मोड", "ट्यूबलेस टायर"]
-    },
-    image: "https://picsum.photos/seed/mahsupro/600/400",
-    images: [
-      "https://picsum.photos/seed/mahsupro/600/400",
-      "https://picsum.photos/seed/mahsupro2/600/400",
-      "https://picsum.photos/seed/mahsupro3/600/400"
-    ],
-    status: "available"
-  },
-  {
-    id: "v6",
-    category: "auto",
-    make: "Piaggio",
-    model: "Ape DX",
-    year: 2018,
-    price: 140000, // ₹ 1.4 Lakhs
-    mileage: 41000,
-    fuelType: "Diesel (डीजल)",
-    transmission: "4-Speed Manual (4-स्पीड मैनुअल)",
-    engine: "436cc Water Cooled",
-    description: {
-      en: "Robust daily passenger loader. Piaggio Ape is diesel-driven supplying immense hill-climbing torque. Certified and emission clearances passed for local permits.",
-      hi: "मजबूत और टिकाऊ पैसेंजर ऑटो। पियाजियो आपे डीजल चालित है जो बेहतरीन टॉर्क और चढ़ाई क्षमता प्रदान करता है। स्थानीय परमिट के लिए पूरी तरह स्वीकृत।"
-    },
-    features: {
-      en: ["Heavy Duty Chassis", "Wide Driver Cabin", "Extra Luggage Roof Carrier", "High Heat Protection System"],
-      hi: ["मजबूत चेसिस", "चौड़ा ड्राइवर केबिन", "सामान के लिए रूफ कैरियर", "हाई हीट प्रोटेक्शन सिस्टम"]
-    },
-    image: "https://picsum.photos/seed/piaggioape/600/400",
-    images: [
-      "https://picsum.photos/seed/piaggioape/600/400",
-      "https://picsum.photos/seed/piaggioape2/600/400",
-      "https://picsum.photos/seed/piaggioape3/600/400"
-    ],
-    status: "available"
-  },
-  {
-    id: "v7",
-    category: "car",
-    make: "Mahindra",
-    model: "Bolero Power+ ZLX",
-    year: 2017,
-    price: 640000, // ₹ 6.4 Lakhs
-    mileage: 72000,
-    fuelType: "Diesel (डीजल)",
-    transmission: "Manual (मैनुअल)",
-    engine: "1.5L mHawk75",
-    description: {
-      en: "Full SUV toughness. Mahindra Bolero ZLX top model with digital cluster, original body cladding, and massive ground clearance. Excellent suspension for village roads.",
-      hi: "पूरी तरह से मजबूत और दमदार एसयूवी। महिंद्रा बोलेरो ZLX टॉप मॉडल जिसमें डिजिटल क्लस्टर, ओरिजिनल बॉडी क्लैडिंग और जबरदस्त ग्राउंड क्लीयरेंस है। ग्रामीण रास्तों के लिए सर्वोत्तम सस्पेंशन।"
-    },
-    features: {
-      en: ["Micro Hybrid System", "All 4 Power Windows", "Rear Wiper", "Voice Messaging System", "Fog Lamps"],
-      hi: ["माइक्रो हाइब्रिड सिस्टम", "सभी 4 पावर विंडो", "रियर वाइपर", "वॉइस मैसेजिंग सिस्टम", "फॉग लैंप"]
-    },
-    image: "https://picsum.photos/seed/bolero/600/400",
-    images: [
-      "https://picsum.photos/seed/bolero/600/400",
-      "https://picsum.photos/seed/bolero2/600/400",
-      "https://picsum.photos/seed/bolero3/600/400"
-    ],
-    status: "available"
-  },
-  {
-    id: "v8",
+    id: "v22",
     category: "mini-truck",
     make: "Tata",
-    model: "Intra V10",
+    model: "Ace Gold",
     year: 2022,
-    price: 520000, // ₹ 5.2 Lakhs
-    mileage: 26000,
+    price: 360000,
+    mileage: 52000,
     fuelType: "Diesel (डीजल)",
     transmission: "Manual (मैनुअल)",
-    engine: "2-Cylinder 800cc DI",
+    engine: "702cc DI Engine",
     description: {
-      en: "Almost brand new Tata Intra mini truck. Power steering, super comfortable car-like cabin, leaf spring suspension built for heavy weight transportation loads.",
-      hi: "लगभग बिल्कुल नया टाटा इंट्रा मिनी ट्रक। पावर स्टीयरिंग, कार जैसा आरामदायक केबिन और भारी माल ढुलाई के लिए बनाए गए मजबूत लीफ स्प्रिंग सस्पेंशन पैड्स।"
+      en: "Tata Ace Gold 2022 diesel, first owner in excellent condition. 60,000 km driven with original paint and strong body. Reliable commercial vehicle for daily goods transport.",
+      hi: "टाटा एस गोल्ड 2022 डीजल, पहला मालिक, बेहतरीन स्थिति। 60,000 किमी चला, ओरिजिनल पेंट और मजबूत बॉडी। रोज़ाना माल ढुलाई के लिए भरोसेमंद वाहन।"
     },
     features: {
-      en: ["Power Steering", "Eco Mode Switch", "Gear Shift Advisor", "Car-like Comfort Seats"],
-      hi: ["पावर स्टीयरिंग", "इको मोड स्विच", "गियर शिफ्ट एडवाइजर", "कार जैसी आरामदायक सीटें"]
+      en: ["Excellent Condition", "First Owner 2022", "Original Paint & Body", "Strong Cargo Frame"],
+      hi: ["बेहतरीन स्थिति", "2022 का पहला मालिक", "ओरिजिनल पेंट और बॉडी", "मजबूत कार्गो फ्रेम"]
     },
-    image: "https://picsum.photos/seed/tataintra/600/400",
+    image: "goldtata1.jpeg",
     images: [
-      "https://picsum.photos/seed/tataintra/600/400",
-      "https://picsum.photos/seed/tataintra2/600/400",
-      "https://picsum.photos/seed/tataintra3/600/400"
+       "goldtata1.jpeg",
+        "goldtata2.jpeg",
+         "goldtata3.jpeg",
+          "goldtata4.jpeg",
+           "goldtata5.jpeg",
+            "goldtata6.jpeg",
+             "goldtata7.jpeg",
+              "goldtata8.jpeg",
+          "goldtata9.jpeg",
+          "goldtata10.jpeg",
+         
+    ],
+    status: "available"
+  },
+ 
+  {
+    id: "v24",
+    category: "mini-truck",
+    make: "Mahindra",
+    model: "Bolero Pickup City 3000 VXi",
+    year: 2023,
+    price: 700000,
+    mileage: 58000,
+    fuelType: "Diesel (डीजल)",
+    transmission: "Manual (मैनुअल)",
+    engine: "2523cc mCR100 Diesel",
+    description: {
+      en: "Mahindra Bolero Pickup City 3000 VXi, 2023 model. Premium pickup with high ground clearance and powerful mCR diesel engine. 58,000 km driven, ideal for city and tough terrain.",
+      hi: "महिंद्रा बोलेरो पिकअप सिटी 3000 VXi, 2023 मॉडल। प्रीमियम पिकअप, उच्च ग्राउंड क्लीयरेंस और शक्तिशाली mCR डीजल इंजन। 58,000 किमी चला, शहर और कठिन रास्तों के लिए आदर्श।"
+    },
+    features: {
+      en: ["High Ground Clearance", "mCR100 Diesel Engine", "VXi Top Variant", "Heavy Payload Capacity"],
+      hi: ["उच्च ग्राउंड क्लीयरेंस", "mCR100 डीजल इंजन", "VXi टॉप वेरिएंट", "भारी पेलोड क्षमता"]
+    },
+    image: "max1.jpeg",
+    images: [
+      "max1.jpeg",
+      "max2.jpeg",
+      "max3.jpeg",
+      "max4.jpeg",
+      "max5.jpeg"
+    ],
+    status: "available"
+  },
+  {
+    id: "v25",
+    category: "bike",
+    make: "KTM",
+    model: "KTM RC 200",
+    year: 2023,
+    price: 130000,
+    mileage: 16000,
+    fuelType: "Petrol (पेट्रोल)",
+    transmission: "6-Speed Manual (6-स्पीड मैनुअल)",
+    engine: "199.5cc Single Cylinder LC",
+    description: {
+      en: "KTM RC 200, the race-track inspired street supersport. 2023 model with only 16,000 km run. Aggressive orange livery, WP suspension and high-performance braking for thrill seekers.",
+      hi: "KTM RC 200, रेस-ट्रैक से प्रेरित स्ट्रीट सुपरस्पोर्ट। 2023 मॉडल, सिर्फ 16,000 किमी चली। आक्रामक ऑरेंज लिवरी, WP सस्पेंशन और हाई-परफॉर्मेंस ब्रेकिंग।"
+    },
+    features: {
+      en: ["WP Apex Suspension", "Dual Channel ABS", "Slipper Clutch", "Race-Inspired Design"],
+      hi: ["WP Apex सस्पेंशन", "डुअल चैनल ABS", "स्लिपर क्लच", "रेस-इंस्पायर्ड डिज़ाइन"]
+    },
+    image: "Ktm1.jpeg",
+    images: [
+      "Ktm1.jpeg",
+      "Ktm2.jpeg",
+      "Ktm3.jpeg",
+      "Ktm4.jpeg",
+      "Ktm5.jpeg",
+      "Ktm6.jpeg",
+      "Ktm7.jpeg",
+    ],
+    status: "available"
+  },
+  {
+    id: "v26",
+    category: "car",
+    make: "Mahindra",
+    model: "Scorpio S11 Classic",
+    year: 2022,
+    price: 1250000,
+    mileage: 70000,
+    fuelType: "Diesel (डीजल)",
+    transmission: "Manual (मैनुअल)",
+    engine: "2.2L mHawk Diesel",
+    description: {
+      en: "Mahindra Scorpio 2022, originally S3 upgraded to full S11 Classic spec. First owner, excellent condition with 70,000 km. Fully loaded SUV with all top features — commanding road presence at a great price.",
+      hi: "महिंद्रा स्कॉर्पियो 2022, S3 से पूरी S11 क्लासिक स्पेक में अपग्रेड। पहला मालिक, बेहतरीन स्थिति, 70,000 किमी चली। पूरी तरह लोडेड SUV — शानदार रोड प्रेजेंस, बेहतरीन कीमत पर।"
+    },
+    features: {
+      en: ["S11 Classic Full Conversion", "7-Seater SUV", "First Owner 2022", "Excellent Condition"],
+      hi: ["S11 क्लासिक फुल कन्वर्जन", "7-सीटर SUV", "2022 का पहला मालिक", "बेहतरीन स्थिति"]
+    },
+    image: "scr1.jpeg",
+    images: [
+      "scr1.jpeg",
+      "scr2.jpeg",
+      "scr3.jpeg",
+      "scr4.jpeg",
+      "scr5.jpeg",
+      "scr6.jpeg",
+      "scr7.jpeg",
+      "scr8.jpeg",
+      "scr9.jpeg",
+      "scr10.jpeg",
+      "scr11.jpeg",
+      "scr12.jpeg",
+      
+    ],
+    status: "available"
+  },
+  {
+    id: "v27",
+    category: "car",
+    make: "Maruti Suzuki",
+    model: "Dzire Tour",
+    year: 2023,
+    price: 550000,
+    mileage: 0,
+    fuelType: "Petrol + CNG (पेट्रोल + सीएनजी)",
+    transmission: "Manual (मैनुअल)",
+    engine: "1.2L K-Series Dual Jet",
+    description: {
+      en: "Maruti Suzuki Dzire Tour 2023, first owner. Dual fuel Petrol+CNG for excellent city economy. Ideal for daily commute and cab use, well maintained in pristine condition.",
+      hi: "मारुति सुज़ुकी ड्ज़ायर टूर 2023, पहला मालिक। पेट्रोल+सीएनजी दोनों ईंधन, शहरी उपयोग के लिए बेहतरीन। रोज़ाना यात्रा और कैब के लिए आदर्श, बेहतरीन स्थिति में।"
+    },
+    features: {
+      en: ["Petrol + CNG Dual Fuel", "First Owner 2023", "Power Steering", "Central Locking & Power Windows"],
+      hi: ["पेट्रोल + सीएनजी दोहरा ईंधन", "2023 का पहला मालिक", "पावर स्टीयरिंग", "सेंट्रल लॉकिंग और पावर विंडो"]
+    },
+    image: "swift1.jpeg",
+    images: [
+       "swift2.jpeg",
+        "swift3.jpeg",
+         "swift4.jpeg",
+          "swift5.jpeg",
+           "swift6.jpeg",
+          
+    ],
+    status: "available"
+  },
+  {
+    id: "v28",
+    category: "auto",
+    make: "Bajaj",
+    model: "RE EV",
+    year: 2024,
+    price: 185000,
+    mileage: 0,
+    fuelType: "Electric (इलेक्ट्रिक)",
+    transmission: "Automatic (ऑटोमैटिक)",
+    engine: "Electric Motor",
+    description: {
+      en: "Bajaj Electric RE auto rickshaw, 2024 model, first owner. Zero emission and smooth automatic drive. Very low running cost per km — ideal for city passenger transport.",
+      hi: "बजाज इलेक्ट्रिक RE ऑटो रिक्शा, 2024 मॉडल, पहला मालिक। शून्य प्रदूषण और स्मूद ऑटोमैटिक ड्राइव। बेहद कम प्रति किमी खर्च — शहरी यात्री परिवहन के लिए आदर्श।"
+    },
+    features: {
+      en: ["Electric Zero Emission", "2024 Model First Owner", "Smooth Auto Drive", "Very Low Running Cost"],
+      hi: ["इलेक्ट्रिक शून्य प्रदूषण", "2024 मॉडल पहला मालिक", "स्मूद ऑटो ड्राइव", "बेहद कम चलाने का खर्च"]
+    },
+    image: "mahindraA1.jpeg",
+    images: [
+      "mahindraA1.jpeg",
+     "mahindraA2.jpeg",
+     "mahindraA3.jpeg",
+     "mahindraA4.jpeg",
+     "mahindraA5.jpeg",
+     "mahindraA6.jpeg",
+  
     ],
     status: "available"
   }

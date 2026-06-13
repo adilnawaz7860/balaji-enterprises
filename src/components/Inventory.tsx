@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Search, RotateCcw, MessageCircle, Calendar, Gauge, Fuel, Shuffle, Heart, Eye, CheckCircle2, AlertCircle, ChevronLeft, ChevronRight, Phone, X, Share2 } from 'lucide-react';
 import { Vehicle, Language, Theme, VehicleCategory } from '../types';
@@ -29,6 +29,28 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
   
   // State to handle transient copy-to-clipboard styling feedback
   const [shareCopied, setShareCopied] = useState(false);
+
+  // Lightbox: index into activeVehicleDetail.images, null = closed
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const touchStartX = useRef<number>(0);
+
+  const lightboxImages = activeVehicleDetail?.images ?? [];
+  const lightboxOpen = lightboxIndex !== null;
+
+  const lightboxPrev = () => setLightboxIndex(i => i === null ? 0 : i === 0 ? lightboxImages.length - 1 : i - 1);
+  const lightboxNext = () => setLightboxIndex(i => i === null ? 0 : i === lightboxImages.length - 1 ? 0 : i + 1);
+  const lightboxClose = () => setLightboxIndex(null);
+
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') lightboxClose();
+      if (e.key === 'ArrowLeft') lightboxPrev();
+      if (e.key === 'ArrowRight') lightboxNext();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lightboxOpen, lightboxImages.length]);
 
   const handleShare = async (vehicle: Vehicle) => {
     const shareText = currentLanguage === 'en'
@@ -241,6 +263,7 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
                 <option value="car">{t.filterCar}</option>
                 <option value="auto">{t.filterAuto}</option>
                 <option value="mini-truck">{t.filterMiniTruck}</option>
+                <option value="bike">{currentLanguage === 'en' ? 'Bike / Motorcycle' : 'बाइक / मोटरसाइकिल'}</option>
               </select>
             </div>
 
@@ -388,7 +411,7 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
                     {/* Floating Brand Badge */}
                     <div className="absolute top-3 left-3">
                       <span className="px-2.5 py-1 text-[11px] font-bold tracking-wide uppercase bg-slate-900/90 text-amber-400 rounded-full border border-slate-700">
-                        {vehicle.category === 'car' ? t.filterCar : vehicle.category === 'auto' ? t.filterAuto : t.filterMiniTruck}
+                        {vehicle.category === 'car' ? t.filterCar : vehicle.category === 'auto' ? t.filterAuto : vehicle.category === 'bike' ? (currentLanguage === 'en' ? 'Bike' : 'बाइक') : t.filterMiniTruck}
                       </span>
                     </div>
 
@@ -501,8 +524,9 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
                     <img
                       src={activeVehicleDetail.images[activeImageIndex]}
                       alt={`${activeVehicleDetail.make} ${activeVehicleDetail.model}`}
-                      className="w-full h-full object-cover transition-all duration-300"
+                      className="w-full h-full object-cover transition-all duration-300 cursor-zoom-in"
                       referrerPolicy="no-referrer"
+                      onClick={() => setLightboxIndex(activeImageIndex)}
                     />
                     
                     {/* Left arrow */}
@@ -563,7 +587,7 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
                 {/* Floating Badge */}
                 <div className="absolute top-4 left-4 z-10">
                   <span className="px-3 py-1 text-xs font-extrabold tracking-wide uppercase bg-slate-900/90 text-amber-400 rounded-full border border-slate-750">
-                    {activeVehicleDetail.category === 'car' ? t.filterCar : activeVehicleDetail.category === 'auto' ? t.filterAuto : t.filterMiniTruck}
+                    {activeVehicleDetail.category === 'car' ? t.filterCar : activeVehicleDetail.category === 'auto' ? t.filterAuto : activeVehicleDetail.category === 'bike' ? (currentLanguage === 'en' ? 'Bike' : 'बाइक') : t.filterMiniTruck}
                   </span>
                 </div>
               </div>
@@ -680,6 +704,82 @@ export default function Inventory({ currentLanguage, currentTheme }: InventoryPr
 
             </div>
           </motion.div>
+        </div>
+      )}
+
+      {/* Full-screen Image Lightbox */}
+      {lightboxOpen && lightboxIndex !== null && (
+        <div
+          className="fixed inset-0 z-100 bg-black/96 flex items-center justify-center"
+          onClick={lightboxClose}
+          onTouchStart={(e) => { touchStartX.current = e.touches[0].clientX; }}
+          onTouchEnd={(e) => {
+            const diff = touchStartX.current - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) diff > 0 ? lightboxNext() : lightboxPrev();
+          }}
+        >
+          {/* Close button */}
+          <button
+            onClick={(e) => { e.stopPropagation(); lightboxClose(); }}
+            className="absolute top-4 right-4 z-20 p-2.5 rounded-full bg-white/15 hover:bg-white/30 text-white transition-colors cursor-pointer backdrop-blur-sm"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          {/* Image counter */}
+          {lightboxImages.length > 1 && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-black/50 text-white text-xs font-bold tracking-widest backdrop-blur-sm">
+              {lightboxIndex + 1} / {lightboxImages.length}
+            </div>
+          )}
+
+          {/* Left arrow */}
+          {lightboxImages.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); lightboxPrev(); }}
+              className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors cursor-pointer backdrop-blur-sm"
+            >
+              <ChevronLeft className="h-7 w-7" />
+            </button>
+          )}
+
+          {/* Right arrow */}
+          {lightboxImages.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); lightboxNext(); }}
+              className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white transition-colors cursor-pointer backdrop-blur-sm"
+            >
+              <ChevronRight className="h-7 w-7" />
+            </button>
+          )}
+
+          {/* Full image */}
+          <motion.img
+            key={lightboxIndex}
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.18 }}
+            src={lightboxImages[lightboxIndex]}
+            alt="Full screen view"
+            className="max-w-[90vw] max-h-[88vh] w-auto h-auto object-contain select-none"
+            referrerPolicy="no-referrer"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {/* Dot indicators */}
+          {lightboxImages.length > 1 && (
+            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+              {lightboxImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  onClick={(e) => { e.stopPropagation(); setLightboxIndex(idx); }}
+                  className={`rounded-full transition-all cursor-pointer ${
+                    idx === lightboxIndex ? 'w-5 h-2 bg-white' : 'w-2 h-2 bg-white/35 hover:bg-white/60'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
 
